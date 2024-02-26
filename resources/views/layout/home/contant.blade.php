@@ -20,15 +20,15 @@
             <ul class="list-group" data-bs-toggle="modal" data-bs-target="#exampleModal{{$dt->word_id}}">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <p class="text-row">{{$dt->word}}</p>
-                    <span class="badge bg-danger rounded-pill" style="opacity: 0.4;">FR</span>
+                    <span class="badge small text-dark" style="opacity: 0.2;">FR</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <p class="text-row">{{$dt->word_km}}</p>
-                    <span class="badge bg-primary rounded-pill" style="opacity: 0.4;">KM</span>
+                    <span class="badge small text-dark" style="opacity: 0.2;">KM</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <p class="text-row">{{$dt->word_en}}</p>
-                    <span class="badge bg-success rounded-pill" style="opacity: 0.4;">EN</span>
+                    <span class="badge small text-dark" style="opacity: 0.2;">EN</span>
                 </li>
             </ul>
         </div>
@@ -41,42 +41,22 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="accordion" id="accordionExample{{$dt->word_id}}">
-                            <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    {{ $dt->word }} <span class="text-light bg-danger ms-2 small badge rounded-pill">French</span>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample{{$dt->word_id}}">
-                                <div class="accordion-body">
-                                    <p>{{ $dt->description }}</p>
-                                </div>
+                        <div class="card mb-2">
+                            <div class="card-body">
+                              <h6 class="card-title">{{ $dt->word }}</h6>
+                              <p class="card-text">{{ $dt->description }}</p>
                             </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="card-body">
+                              <h6 class="card-title">{{ $dt->word_km }}</h6>
+                              <p class="card-text">{{ $dt->description_km }}</p>
                             </div>
-                            <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    {{ $dt->word_km  }} <span class="text-light bg-primary ms-2 small badge rounded-pill">Khmer</span>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample{{$dt->word_id}}">
-                                <div class="accordion-body">
-                                    <p>{{ $dt->description_km }}</p>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    {{ $dt->word_en }} <span class="text-light bg-success ms-2 small badge rounded-pill">English</span>
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample{{$dt->word_id}}">
-                                <div class="accordion-body">
-                                    <p>{{$dt->description_en}}</p>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="card-body">
+                              <h6 class="card-title">{{ $dt->word_en }}</h6>
+                              <p class="card-text">{{ $dt->description_en }}</p>
                             </div>
                         </div>
                     </div>
