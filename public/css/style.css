@@ -28,12 +28,12 @@
     border-bottom: 1px solid #00000011;
     box-shadow: 0 0.5rem 1rem #0000000b !important;
 }
-.card .card-body p{
+/* .card .card-body p{
     display: -webkit-box;
     -webkit-Line-clamp: 2;
     -webkit-box-orient: vertical; 
     overflow: hidden;
-}
+} */
 .card .card-profile {
     max-height: 300px;
     overflow: hidden;
