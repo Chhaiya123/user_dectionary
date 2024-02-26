@@ -54,7 +54,7 @@
                             <div class="card mb-2">
                                 <div class="card-body">
                                   <h6 class="card-title">{{ $dt->word }}</h6>
-                                  <p class="card-text">{{ $dt->description }} ព្រូយចិត្ត</p>
+                                  <p class="card-text">{{ $dt->description }}</p>
                                 </div>
                             </div>
                             <div class="card mb-2">
